@@ -1,0 +1,21 @@
+<p>Construction cost clculator for 1000 SqFt</p>
+<div class="totalCost">Total Cost : {{ totalPrice() }}</div>
+<div>
+  <div class="styleNone">
+    <input type="text" placeholder="Item" disabled />
+    <input type="number" class="price" placeholder="Price" disabled />
+    <input type="number" class="qty" placeholder="Quantity" disabled />
+    <span style="padding:10px">Include</span>
+  </div>
+  <div *ngFor="let item of items">
+    <input [(ngModel)]="item.title" type="text" />
+    <input [(ngModel)]="item.price" type="number" class="price" />
+    <input [(ngModel)]="item.qty" type="number" class="qty" />
+    <span
+      (click)="item.active = !item.active"
+      class="round"
+      [ngClass]="{ active: item?.active }"
+    ></span>
+  </div>
+  <button (click)="add()" style="padding:10px">Add New Item</button>
+</div>

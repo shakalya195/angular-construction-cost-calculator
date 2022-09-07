@@ -1,0 +1,42 @@
+p {
+  font-family: Lato;
+}
+* {
+  font-size: 15px;
+  font-family: sans-serif;
+}
+input {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.qty {
+  width: 80px;
+}
+.price {
+  width: 100px;
+}
+.styleNone input {
+  border: none;
+}
+.totalCost {
+  padding: 10px;
+  background-color: red;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+}
+.round {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #eee;
+  border: solid thin #ccc;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 10px;
+  cursor: pointer;
+}
+.round.active {
+  background-color: green;
+}
